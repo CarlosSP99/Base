@@ -1,4 +1,4 @@
-package com.utad.base
+package com.utad.base.util
 
 object Constants {
 

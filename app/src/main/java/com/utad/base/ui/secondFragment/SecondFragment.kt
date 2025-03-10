@@ -52,7 +52,7 @@ class SecondFragment : Fragment() {
         lifecycleScope.launch {
             viewModel.uiState.collect{
                 binding.pbLoading.visibility = if (it.loading) View.VISIBLE else View.GONE
-
+                binding.tvTitleBig.text=it.objetoAMostrar.title
                 Glide.with(binding.imagen.context)
                     .load(it.objetoAMostrar.image)
                     .diskCacheStrategy(DiskCacheStrategy.ALL)

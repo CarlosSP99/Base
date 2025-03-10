@@ -1,6 +1,5 @@
 package com.utad.network
 
-import com.utad.base.ApiClient
 import com.utad.base.model.Ropa
 import javax.inject.Inject
 

@@ -1,9 +1,7 @@
-package com.utad.base
+package com.utad.network
 
-import androidx.room.Query
 import com.utad.base.model.Ropa
 import retrofit2.http.GET
-import retrofit2.http.Header
 import retrofit2.http.Path
 
 interface ApiClient {
