@@ -51,6 +51,7 @@ class SecondFragment : Fragment() {
     private fun paintUI() {
         lifecycleScope.launch {
             viewModel.uiState.collect{
+                binding.pbLoading.visibility = if (it.loading) View.VISIBLE else View.GONE
 
                 Glide.with(binding.imagen.context)
                     .load(it.objetoAMostrar.image)

@@ -47,6 +47,7 @@ class MainFragment : Fragment() {
     private fun loadData() {
         lifecycleScope.launch {
             viewModel.uiState.collect{
+                binding.pbLoading.visibility = if (it.isLoading) View.VISIBLE else View.GONE
                 adapter.ropaList=it.ropaList
                 adapter.notifyDataSetChanged()
             }

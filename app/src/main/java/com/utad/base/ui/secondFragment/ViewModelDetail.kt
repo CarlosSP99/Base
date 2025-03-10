@@ -26,6 +26,7 @@ class ViewModelDetail @Inject constructor(
             _uiState.update { currentState ->
                 currentState.copy(
                     objetoAMostrar = repository.getProductoById(id),
+                    loading = false
                 )
 
             }
@@ -35,5 +36,6 @@ class ViewModelDetail @Inject constructor(
 
 
 data class uiStateDetailView(
-    var objetoAMostrar: Ropa = Ropa()
+    var objetoAMostrar: Ropa = Ropa(),
+    var loading: Boolean=true
         )
